@@ -1,36 +1,152 @@
-#include<string.h>
+// #include<string.h>
+
+// /*
+// 	Realizovati klasu Student koja ima privatne atribute ime,prezime i broj indeksa.
+// 	Metode: inicijalizacija(char* i,char* p,int b) postavlja vrednosti atribute na vrednosti koje dolazi kao argumenti i ispis koja ispisuje vrednosti atributa.
+// */
+
+// class Student
+// {
+// 	char ime[10];
+// 	char prezime[20];
+//     int	br_indeksa;
+// public:
+// 	void inic(char* i,char* p,int b);          //prototip metor=de za inicijalizaciju podataka o studentu
+// 	void ispis();                                       //protip f-je za ispis  podataka
+// } ;
+// /**
+//  * Definicije metoda ciji su prototipovi navedeni u f-ji
+//  * povratni_tip ime_klase::ime_metode(tip1 arg1,tip2 agr2,..){ naredbe;}
+//  **/
+
+// void Student::inic(char* i,char* p,int b){
+//    strcpy(ime,i); //f-ja iz biblioteke string.h koja kopira string i u string ime
+//    strcpy(prezime,p);
+//    br_indeksa=b;
+// }
+// void Student::ispis(){
+// 	cout<<ime<<" "<<prezime<<" "<<br_indeksa<<endl;
+// }
+
+// void main(){
+//   Student informaticar;
+//   informaticar.inic("Miki","Maus",9);
+//   informaticar.ispis();
+
+// }
+
+// #include<iostream.h>
+// #include<string.h>
+/**
+ * unutar metode adresa objekta koji je pozvao  je dostupna preko  kljucne reci this
+ * this- adresa ojekta koji je pozvao metodu
+ * *this-sam objekat
+ **/
 
 /*
-	Realizovati klasu Student koja ima privatne atribute ime,prezime i broj indeksa.
-	Metode: inicijalizacija(char* i,char* p,int b) postavlja vrednosti atribute na vrednosti koje dolazi kao argumenti i ispis koja ispisuje vrednosti atributa.
-*/
-
-class Student
-{
-	char ime[10];
-	char prezime[20];
-    int	br_indeksa;
-public:
-	void inic(char* i,char* p,int b);          //prototip metor=de za inicijalizaciju podataka o studentu
-	void ispis();                                       //protip f-je za ispis  podataka
-} ;
+	Reazlivati klasu DvaZnaka koja ima dva javna atributa koji su tipa karakteri
+	Metode: inicijalizacija(z1,z2),uvecaj() koja uvecava znakove tj dobijamo sledece karaktere u ASCII tabeli;
+	ispis() metoda koja ispisuje koji su trenutni znaci
+	adresaoObjekta() ispisuje adresu objekta koji je pozvao
+// */
+// class DvaZnaka
+// {
+// public:
+// 	char c1;//prvi atribut znakovnog tipa
+// 	char c2;//drugi atribut znakovnog tipa
+// public:
+// 	void inic(char z1,char z2);          //prototip metode za inicijalizaciju dva znaka
+// 	void uvecaj();                       //prototip metode za uvecavanje znakova(dobijamo sledece karaktere po ASSCI kodu)
+// 	void ispis();                         //prototip metode za ispis  podataka pomocu objekta this
+// 	void adresaObjekta();                 //prototip f-je za vracanje adrese objekta koji je pozvao metodu
+	
+// };
 /**
  * Definicije metoda ciji su prototipovi navedeni u f-ji
  * povratni_tip ime_klase::ime_metode(tip1 arg1,tip2 agr2,..){ naredbe;}
  **/
+// void DvaZnaka::adresaObjekta(){ 
 
-void Student::inic(char* i,char* p,int b){
-   strcpy(ime,i); //f-ja iz biblioteke string.h koja kopira string i u string ime
-   strcpy(prezime,p);
-   br_indeksa=b;
-}
-void Student::ispis(){
-	cout<<ime<<" "<<prezime<<" "<<br_indeksa<<endl;
-}
+// 	cout<<this<<endl;
+	
+// 	}
+// //pristup podacima klase preko objekta *this 
+// void DvaZnaka::inic(char z1,char z2){
+// 	this->c1=z1;
+// 	this->c2=z2;
+// }
+// void DvaZnaka::uvecaj(){
+//     this->c1++;
+// 	this->c2++;
 
-void main(){
-  Student informaticar;
-  informaticar.inic("Miki","Maus",9);
-  informaticar.ispis();
+// }
+// void DvaZnaka::ispis(){
+// 	cout<<" Znak1 = "<<this->c1<<" Znak2 = "<<this->c2<<endl;
+// }
 
-}
+// void main(){
+//   DvaZnaka inicijali;
+//   inicijali.inic('U','M');
+//   cout<<"Promenljiva inicijali nalazi se na adresi "<<&inicijali<<endl;
+//   cout<<"Ovo potvrdjuje i nasa metoda adresa :";
+//   inicijali.adresaObjekta();
+//   inicijali.uvecaj();
+//   cout<<"Posle uve'anja novi inicijali su";
+//   inicijali.ispis();
+// }
+
+
+
+// #include<math.h>
+// /**
+//  ** In line f-je preporuka kompajleru da se na mestu poziva f-je umetne njen kod cime se vrsi usteda.
+//  ** D je f-ja inline oznacavamo prefiksom inline i koristi se samo kod jako malih  f-ja
+//  ** f-je koju su definisane unutar definicije klase su inline
+// **/
+// /*
+//    Realizovati klasu Trougao koja ima tri privatna atributa a,b i c (realne vrednosti)
+//    i metode: inicijalizacija(a,b,c) postavlja vrednosti atributa na vrednosti argumenata;
+//    pisi - metoda koja ispisuje podatke o atributima a,b i c;
+//    P() - metoda koja racuna povrsinu trougla; O() racuna i vraca obim trougla;
+// */
+// class Trougao{
+// 	double a,b,c;         //atributi klase stranice trougla
+// public:
+// 	void inic(double a,double b, double c); //prototip metode za inicijalizaciju atributa
+// 	void pisi();                            //prototip metode za ispis
+// 	double P();                             //prototip metode za racunanje povrsine
+// 	double O(){
+// 	return(a+b+c);
+// 	}
+// };
+// void Trougao::inic(double a,double b, double c){
+//    this->a=a;  // koristi se pokazivac this jer atributi i argumenti imaju isto ime
+//    this->b=b;
+//    this->c=c;
+// }
+// void Trougao::pisi(){
+//   cout<<"Duzine stranica su a="<<a<<endl<<"\t\t   b="<<b<<endl<<"\t\t   c="<<c<<endl;
+
+// }
+// double Trougao::P(){
+//    double s=(a+b+c)/2;
+//    return sqrt(s*(s-a)*(s-b)*(s-c));
+// }
+// void main(){
+// Trougao t;
+// t.inic(5,3,7);
+// t.pisi();
+// cout<<"O= "<<t.O()<<" P= "<<t.P()<<endl;
+
+// }
+
+
+// Opisati klasu stack koja sadrži niz znakova  duzinu i vrh kao i realizovane sledece metode:
+// stack-konstruktor sa podrazumevajućom dužinom
+// stack-konstruktor sa datim stringom i dužinom
+// reset-prazni stek
+// push –stavlja znak u stek
+// pop-uzima vrednost sa vrha steka
+// top_of vraca vrednost sa vrha steka
+// empty-proverava da li je stek prazan
+// full-proverava da li je stek pun
