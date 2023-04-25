@@ -223,11 +223,117 @@
 //     Stack s2(4,"ABCD");
 //     while(!s2.empty()){
 // 		 cout<<s2.pop()<<endl;
-    
 // 	}
-	
-	
-	
-	
-	
+// }
+
+// using namespace std;
+// #include<iostream>
+// #include<string.h>
+// class Tacka2{
+// public:
+// int x;
+// int y;
+
+//   Tacka2(){
+//   cout<<"Napravljen je objekat na adresi"<<this<<endl ;}
+//   Tacka2(int x,int y)
+//   {this->x=x;
+//    this->y=y;
+//    cout<<"Napravljen je objekat na adresi"<<this<<endl;
+//    cout<<"X="<<this->x<<endl;
+//    cout<<"Y="<<this->y<<endl;
+//    };
+// };
+// class Tacka3{
+// int x;
+// int y;
+// int z;
+// public:
+//   Tacka3(){
+//   cout<<"Napravljen je objekat na adresi"<<this<<endl ;}
+//   Tacka3(int x,int y,int z)
+//   {this->x=x;
+//    this->y=y;
+//    this->z=z;
+//    cout<<"Napravljen je objekat na adresi"<<this<<endl;
+//    cout<<"X="<<this->x<<endl;
+//    cout<<"Y="<<this->y<<endl;
+//    cout<<"Z="<<this->z<<endl;
+//    };
+//    Tacka3(Tacka2 t,int z){
+//     this->x=t.x;
+//     this->y=t.y;
+// 	this->z=z;
+// 	cout<<"Napravljen je objekat na adresi"<<this<<endl;
+//    cout<<"X="<<this->x<<endl;
+//    cout<<"Y="<<this->y<<endl;
+//    cout<<"Z="<<this->z<<endl;
+//    }
+// };
+// int main(){
+//    Tacka3 teme,teme1(1,2,3);//Tacka3(),Tacka3 *this=&teme
+//    Tacka2 teme2(4,5);
+//    Tacka3 teme3(teme2,6);
+// }
+
+
+// using namespace std;
+// #include<iostream>
+// #include<string.h>
+// #include<math.h>
+// /* Za razliku od destruktor metode konstruktor moze sadrzati parametre
+//  * kroz parametre konstruktura moguce je proslediti vrednosti polja objekta
+//  * Jedna klasa moze imati vise konstruktora koji se razlikuju po tipu i 
+//  * broju parametara koji  primaju 
+//  */
+// class Tacka
+// {
+// 	int x;
+// 	int y;
+// public:
+// 	Tacka();                         //prototip  konstruktora bez argumenata
+// 	Tacka(int a,int b);              //prototip  konstruktora sa parametrima za inicijalizaciju koordinata
+// 	void translacija(int dx,int dy); //prototip funkcije za translaciju
+// 	void pozicija();                 //prototip f-je za ispis  pozicije
+// 	~Tacka();                        //prototip destruktora
+// } ;
+// /**
+//  * Definicije metoda ciji su prototipovi navedeni u f-ji
+//  * povratni_tip ime_klase::ime_metode(tip1 arg1,tip2 agr2,..){ naredbe;}
+//  * 
+//  **/
+// Tacka::Tacka()
+// {  x=0;
+//    y=0;
+//    cout<<"U telu smo konstruktor metode i kreiramo objekat na adresi"<<this;
+// }
+// Tacka::Tacka(int a,int b=0){
+//    x=a;
+//    y=b;
+// }
+// void Tacka::translacija(int dx, int dy){
+//    x+=dx;
+//    y+=dy;
+// }
+// void Tacka::pozicija(){
+//   cout<<"(x,y)=("<<x<<","<<y<<")"<<endl;
+// }
+// Tacka::~Tacka(){
+//   cout<<"Destruktor metoda  koja uklanja objekat sa pozicije"<<this<<endl;
+// }
+// /* Pozivom konstruktora sa parametrima moze se izvrsiti 
+//  */
+// int main(){
+// Tacka tacka1(5,5); //poziv konastruktora sa argumenata
+// Tacka tacka2(1,20);      //poziv konastruktora sa argumenata
+// Tacka tacka3(7);         //poziv konastruktora sa argumenata ,b dobija podrazumevanu vrednost
+// Tacka tacka4;            //poziv konastruktora bez argumenata
+// cout<<"Tacka1";
+// tacka1.pozicija();
+// cout<<"Tacka2";
+// tacka2.pozicija();
+// cout<<"Tacka3";
+// tacka3.pozicija();
+// cout<<"Tacka4";
+// tacka4.pozicija();
 // }
