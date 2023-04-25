@@ -337,3 +337,77 @@
 // cout<<"Tacka4";
 // tacka4.pozicija();
 // }
+
+// #include<iostream.h>
+// #include<math.h>
+// class Stack
+// {
+//    char *s;                       //dinamicko polje niza karaktera
+//    int max_len;                   //maksimalna duzina niza
+//    int top;                       //indeks elementa koji je na vrhu steka
+// public:
+// 	Stack(int size);                           //prototip konstruktora sa argumenata sa podrazumevanim vrednostima
+//     Stack(int size,const char str[]);               //prototip konstruktora sa argumenata
+//     ~Stack(){ delete []s;}                          //destruktor brise dinamicki niz
+//     void reset();                                   //prototitp metode koja prazni stek
+//     void push(char c);                              //prototip metode koja postavlja karakter na stek
+// 	char pop();                                     //prototip metode koja uzima vrednost sa vrha steka
+//     char top_of();                                  //prototip metode koja vraca vrednost sa vrha steka
+//     bool empty () const;                             //prototip metode koja ispituje da li je stek prazan
+//     bool full();                                     //prototip metode koja ispituje da lismo ispunili stek do vrha
+// 	} ;
+// 	Stack::Stack(int size){
+// 	s=new char(size);
+// 	max_len=size;
+// 	top=-1;}
+
+// 	Stack::Stack(int size,const char str[]){
+// 	s=new char(size);
+// 	max_len=size;
+//     for(int i=0;i<size;i++)
+//     s[i]=str[i];
+// 	top=size-1;}
+// 	void Stack::reset(){
+// 	  top=-1;
+// 	  }
+//     void Stack::push(char c){
+// 	   cout<<top<<endl<<max_len<<endl;
+// 		s[++top]=c;
+	
+// 	}
+// 	char Stack::pop(){
+// 	    return s[top--];
+	
+// 	}
+// 	char Stack::top_of(){
+// 	    return s[top];
+	
+// 	}
+// 	bool Stack::full(){
+// 	    return top==max_len-1;
+	
+// 	}
+// 	bool Stack::empty() const{
+// 	    return top==-1;	
+// 	}
+	
+// void main(){
+// 	Stack s(3);
+// 	char x;
+// 	s.reset();
+// 	cout<<"Unesite niz karaktera"<<endl;
+// 	while(!s.full()){
+// 		cin>>x;
+// 	  if(x==EOF)
+// 	   break;
+// 	  else s.push(x);
+// 	}
+// 	cout<<"Niz karaktera koji je upisan u stek:"<<endl;
+	
+// 	while(!s.empty()){
+// 		cout<<s.pop()<<endl;}
+//     Stack s2(4,"ABCD");
+//     while(!s2.empty()){
+// 		 cout<<s2.pop()<<endl;
+// 	}
+// }
