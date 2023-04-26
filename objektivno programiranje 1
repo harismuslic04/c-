@@ -488,7 +488,17 @@
 //     return 0;
 // }
 
-/*using namespace std;
+/*
+Realizovati klase Prava i Kvadrat. 
+Klasa Prava ima atribute x1,y1,x2,y2,d. 
+Metode: Konstruktor sa i bez argumenata, 
+set i get metode, 
+metoda racunajDuzinu() i metodu ispis(). 
+Kvadrat ima atribute:Prava vrh,Prava dno 
+Metode:Konstruktor sa i bez argumenata, povrsina(),obim() i ispis().
+
+
+using namespace std;
 #include<iostream>
 #include<string.h>
 #include<math.h>
@@ -532,3 +542,68 @@ kvadrat ko1(po1, po2);
 ko1.ispis(); 
 return 0; 
 }*/
+
+/*
+Realizovati klasu Ocena koja ima tri privatna atributa: 
+ime_predmeta, ocenu i datum. 
+Metode: Konstruktor sa i bez argumenata, metodu jeLiPolozio() koja vraca true ako je student polozio ispit i false ako nije. 
+Ispis() koja ispisuje podatke o oceni, set i get metode. 
+Klasa Student ima privatne atribute: imeIprezime, brIndeksa, ocena1, ocena2 i ocena3 ( objekti klase ocena). set i get metode. int ukupnoPolozenih() - vraca broj polozenih ispita. float prosek() - vraca prosek studenta. ispis() - ispuje podatke o studentu i njegovim ocenama.
+using namespace std;
+
+#include<iostream>
+#include<string.h>
+#include<math.h>
+
+class Ocena { 
+char imePredmeta[20]; int oc; char datum[10]; 
+public: Ocena() { strcpy(imePredmeta,"OOP"); // string copy 
+oc = 10; 
+strcpy(datum,"15.01.2019"); // string copy 
+} 
+Ocena(char *ip,int o,char *d) { strcpy(imePredmeta,ip); oc = o; 
+strcpy(datum,d); }
+ bool jeLiPolozio() { 
+if(oc > 5) return true; 
+return false; } 
+void ispis() { cout<<"Naziv predmeta : "<<imePredmeta<<endl; 
+cout<<"Ocena : "<<oc<<endl; 
+cout<<"Datum polaganja : "<<datum<<endl; } 
+void setIP(char *ip){strcpy(imePredmeta,ip);} void setOC(int o){oc = o;} void setDT(char *d){strcpy(datum,d);} char *getIP(){return imePredmeta;} int getOC(){return oc;} char *getDT(){return datum;} Ocena(const Ocena &ocn) // copy konstruktor { strcpy(imePredmeta,ocn.imePredmeta); // string copy oc = ocn.oc; strcpy(datum,ocn.datum); // string copy } };
+void ispis() { cout<<"Naziv predmeta : "<<imePredmeta<<endl; 
+cout<<"Ocena : "<<oc<<endl; 
+cout<<"Datum polaganja : "<<datum<<endl; } 
+void setIP(char *ip){strcpy(imePredmeta,ip);} 
+void setOC(int o){oc = o;}
+ void setDT(char *d){strcpy(datum,d);} 
+char *getIP(){return imePredmeta;} 
+int getOC(){return oc;} 
+char *getDT(){return datum;} 
+Ocena(const Ocena &ocn) // copy konstruktor { strcpy(imePredmeta,ocn.imePredmeta); // string copy 
+oc = ocn.oc; 
+strcpy(datum,ocn.datum); // string copy 
+}
+ };
+class Student { 
+char imeIprezime[30]; 
+Ocena Ocena1,Ocena2,Ocena3; 
+public: 
+Student() { 
+strcpy(imeIprezime,"Hamza"); 
+Ocena1.setIP("ORT"); Ocena1.setOC(10); Ocena1.setDT("22.01.2018"); Ocena2.setIP("PROGRAMIRANJE"); Ocena2.setOC(10); Ocena2.setDT("07.02.2018"); 
+Ocena3.setIP("OET"); Ocena3.setOC(5); Ocena3.setDT("05.02.2018"); } 
+Student(char *ip,Ocena o1,Ocena o2,Ocena o3) { 
+strcpy(imeIprezime,ip); Ocena1 = o1; Ocena2 = o2; Ocena3 = o3; }
+int ukupnoPolozenih() { 
+int s=0; 
+if(Ocena1.jeLiPolozio() == true) s++; 
+if(Ocena2.jeLiPolozio() == true) s++; 
+if(Ocena3.jeLiPolozio() == true) s++; 
+return s; } 
+float prosek() { 
+float s = (Ocena1.getOC() + Ocena2.getOC() + Ocena3.getOC())/3; 
+return s; } 
+void ispis() { 
+cout<<"Student "<<imeIprezime; cout<<" je polozio "<<ukupnoPolozenih()<<" predmeta"; cout<<" i prosek mu je "<<prosek()<<endl; 
+cout<<"Ocena studenta su: "<<endl; Ocena1.ispis(); Ocena2.ispis(); Ocena3.ispis(); } };
+*/
